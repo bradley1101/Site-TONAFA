@@ -1,0 +1,1025 @@
+/* ========================================
+   TONAFA — Feuille de style personnalisée
+   Palette : Marron #4A1908 | Cognac #7F3301
+             Or #D4A017 | Crème #FFDEB3
+             Charbon #1C1410
+   ======================================== */
+
+/* Reset de base */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Scrollbar élégante */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #FFDEB3; }
+::-webkit-scrollbar-thumb { background: #7F3301; border-radius: 3px; }
+
+/* ── NAVIGATION ── */
+.nav-link {
+  font-family: 'Jost', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #1C1410;
+  text-decoration: none;
+  position: relative;
+  padding-bottom: 2px;
+  transition: color 0.3s ease;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: #7F3301;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover { color: #7F3301; }
+.nav-link:hover::after { width: 100%; }
+
+/* ── ICÔNES HEADER ── */
+.icon-btn {
+  color: #1C1410;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.2s ease;
+  padding: 4px;
+}
+.icon-btn:hover {
+  color: #7F3301;
+  transform: scale(1.1);
+}
+
+/* ── HEADER AU SCROLL ── */
+header.scrolled {
+  box-shadow: 0 2px 20px rgba(74, 25, 8, 0.08);
+}
+
+/* ── BANDEAU PROMO DÉFILANT ── */
+.promo-item {
+  font-family: 'Jost', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #FFDEB3;
+  flex-shrink: 0;
+  padding-right: 0;
+}
+
+.promo-track {
+  display: flex;
+  width: max-content;
+  animation: defilement 25s linear infinite;
+}
+
+.promo-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes defilement {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-33.333%); }
+}
+
+/* ── HERO ── */
+.hero-section {
+  min-height: 100vh;
+  position: relative;
+}
+
+.hero-img {
+  width: 100%;
+  max-height: 100vh;
+  object-fit: contain;
+  display: block;
+  transform: scale(1.02);
+  transition: transform 8s ease-out;
+}
+
+.hero-img.loaded {
+  transform: scale(1);
+}
+
+/* ── BOUTON HERO ── */
+.btn-hero {
+  display: inline-block;
+  font-family: 'Jost', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #FFDEB3;
+  border: 1px solid rgba(255, 222, 179, 0.6);
+  padding: 14px 40px;
+  transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.btn-hero:hover {
+  background-color: #FFDEB3;
+  color: #1C1410;
+  border-color: #FFDEB3;
+}
+
+/* ── GRILLE PRODUITS ── */
+.product-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.btn-add-cart {
+  font-family: 'Jost', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: #1C1410;
+  background-color: #FFDEB3;
+  border: none;
+  padding: 12px 28px;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.btn-add-cart:hover {
+  background-color: #7F3301;
+  color: #FFDEB3;
+}
+
+/* ── BOUTON OUTLINE (voir collection) ── */
+.btn-outline {
+  display: inline-block;
+  font-family: 'Jost', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #1C1410;
+  border: 1px solid #1C1410;
+  padding: 14px 48px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.btn-outline:hover {
+  background-color: #1C1410;
+  color: #FFDEB3;
+}
+
+/* ── SECTION À PROPOS ── */
+.about-photo-wrapper {
+  position: relative;
+}
+
+.about-photo-wrapper img {
+  display: block;
+}
+
+/* ── NEWSLETTER ── */
+.newsletter-input {
+  font-family: 'Jost', sans-serif;
+}
+
+.newsletter-input::placeholder {
+  opacity: 0.4;
+}
+
+.btn-newsletter {
+  font-family: 'Jost', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #1C1410;
+  background-color: #D4A017;
+  border: none;
+  padding: 16px 28px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  white-space: nowrap;
+}
+
+.btn-newsletter:hover {
+  background-color: #FFDEB3;
+}
+
+/* ── FOOTER ── */
+.footer-title {
+  font-family: 'Jost', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: #D4A017;
+}
+
+.footer-link {
+  font-family: 'Jost', sans-serif;
+  font-size: 0.75rem;
+  color: #FFDEB3;
+  opacity: 0.5;
+  text-decoration: none;
+  letter-spacing: 0.1em;
+  transition: opacity 0.3s ease, color 0.3s ease;
+}
+
+.footer-link:hover {
+  opacity: 1;
+  color: #D4A017;
+}
+
+.social-link {
+  color: #FFDEB3;
+  opacity: 0.4;
+  transition: opacity 0.3s ease, color 0.3s ease;
+}
+
+.social-link:hover {
+  opacity: 1;
+  color: #D4A017;
+}
+
+/* ════════════════════════════════════════════
+   ANIMATIONS & SCROLL REVEAL
+   ════════════════════════════════════════════ */
+
+/* État initial : éléments invisibles avant apparition */
+.reveal {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* État final : l'élément est apparu */
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Délais en cascade pour les grilles */
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.reveal-delay-4 { transition-delay: 0.4s; }
+
+/* ── TRANSITION DE PAGE ── */
+body {
+  animation: pageFadeIn 0.6s ease forwards;
+}
+
+@keyframes pageFadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* ── HOVER LIFT sur les cartes produit ── */
+.product-card {
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+}
+
+/* ── CURSEUR PERSONNALISÉ ── */
+@media (hover: hover) {
+  body { cursor: none; }
+
+  #custom-cursor {
+    position: fixed;
+    top: 0; left: 0;
+    width: 8px; height: 8px;
+    background-color: #7F3301;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    transition: transform 0.1s ease, width 0.3s ease,
+                height 0.3s ease, background-color 0.3s ease;
+  }
+
+  #custom-cursor.hovered {
+    width: 32px;
+    height: 32px;
+    background-color: transparent;
+    border: 1px solid #7F3301;
+    mix-blend-mode: multiply;
+  }
+}
+
+/* ── SÉPARATEUR DÉCORATIF TONAFA ── */
+.tonafa-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin: 0 auto;
+}
+
+.tonafa-divider::before,
+.tonafa-divider::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 1px;
+  background-color: #7F3301;
+  opacity: 0.3;
+}
+
+/* ── SMOOTH SCROLL ── */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ── FILTRES BOUTIQUE ── */
+.filter-btn {
+  font-family: 'Jost', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #1C1410;
+  background: transparent;
+  border: 1px solid rgba(127, 51, 1, 0.25);
+  padding: 10px 24px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+  background-color: #1C1410;
+  color: #FFDEB3;
+  border-color: #1C1410;
+}
+
+/* ── PAGE CONTACT ── */
+.contact-label {
+  font-family: 'Jost', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #1C1410;
+  opacity: 0.6;
+}
+
+.contact-input {
+  font-family: 'Jost', sans-serif;
+  font-size: 0.85rem;
+  color: #1C1410;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(127, 51, 1, 0.25);
+  padding: 12px 0;
+  outline: none;
+  transition: border-color 0.3s ease;
+  width: 100%;
+}
+
+.contact-input::placeholder {
+  color: #1C1410;
+  opacity: 0.3;
+}
+
+.contact-input:focus {
+  border-bottom-color: #7F3301;
+}
+
+.btn-contact-whatsapp {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  font-family: 'Jost', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: white;
+  background-color: #25D366;
+  border: none;
+  padding: 16px 32px;
+  cursor: pointer;
+  width: 100%;
+  transition: opacity 0.3s ease;
+}
+
+.btn-contact-whatsapp:hover {
+  opacity: 0.9;
+}
+
+.social-link-contact {
+  font-family: 'Jost', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #1C1410;
+  text-decoration: none;
+  opacity: 0.5;
+  transition: opacity 0.3s ease, color 0.3s ease;
+}
+
+.social-link-contact:hover {
+  opacity: 1;
+  color: #7F3301;
+}
+
+/* ── LOGO HEADER ── */
+/* Le logo cognac a un fond noir — on le rend transparent avec mix-blend-mode */
+/*header img {
+  mix-blend-mode: multiply;
+}*/
+
+/* ── SÉLECTEUR DE TAILLE ── */
+.taille-btn {
+  font-family: 'Jost', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  color: #1C1410;
+  background: transparent;
+  border: 1px solid rgba(127, 51, 1, 0.25);
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.taille-btn:hover {
+  border-color: #7F3301;
+  color: #7F3301;
+}
+
+.taille-btn.selected {
+  background-color: #1C1410;
+  color: #FFDEB3;
+  border-color: #1C1410;
+}
+
+/* ── FICHES BOUTIQUE ── */
+.fon-sens {
+  font-family: 'Bodoni Moda', serif;
+  font-style: italic;
+  font-size: 0.85rem;
+  color: #7F3301;
+  opacity: 0.7;
+  margin-bottom: 14px;
+}
+
+.desc-intro,
+.desc-suite p,
+.desc-suite li {
+  font-family: 'Jost', sans-serif;
+  font-size: 0.85rem;
+  line-height: 1.8;
+  color: #1C1410;
+  opacity: 0.8;
+}
+
+.desc-suite p { margin-top: 12px; }
+
+.desc-suite h4 {
+  font-family: 'Jost', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #7F3301;
+  margin-top: 20px;
+}
+
+.desc-suite ul {
+  list-style: disc;
+  padding-left: 18px;
+  margin-top: 6px;
+}
+
+.desc-suite .remarque {
+  font-size: 0.8rem;
+  border-left: 2px solid #D4A017;
+  padding-left: 12px;
+}
+
+.btn-voir-plus {
+  font-family: 'Jost', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #1C1410;
+  background: none;
+  border: none;
+  border-bottom: 1px solid #1C1410;
+  padding: 4px 0;
+  margin-top: 12px;
+  cursor: pointer;
+}
+
+.btn-voir-plus:hover { color: #7F3301; border-color: #7F3301; }
+
+/* Bouton panier visible en permanence (pratique sur mobile) */
+.btn-add-cart.plein {
+  width: 100%;
+  background-color: #1C1410;
+  color: #FFDEB3;
+}
+
+.btn-add-cart.plein:hover {
+  background-color: #7F3301;
+}
+
+.assorti {
+  font-family: 'Jost', sans-serif;
+  font-size: 0.8rem;
+  opacity: 0.7;
+  margin-top: 12px;
+}
+
+.assorti a { color: #7F3301; text-decoration: underline; }
+/* ── CARTES : lien "Voir l'article" ── */
+.voir-article {
+  display: inline-block;
+  font-family: 'Jost', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #1C1410;
+  border-bottom: 1px solid #1C1410;
+  padding-bottom: 2px;
+  margin: 4px 0 0 4px;
+}
+.product-card:hover .voir-article { color: #7F3301; border-color: #7F3301; }
+
+/* ── PAGE ARTICLE ── */
+.lien-retour {
+  font-family: 'Jost', sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #1C1410;
+  opacity: 0.6;
+  text-decoration: none;
+}
+.lien-retour:hover { opacity: 1; color: #7F3301; }
+
+/* Grande photo : affichée en entier, sans recadrage */
+.galerie-principale img {
+  width: 100%;
+  height: auto;
+  max-height: 85vh;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+
+.galerie-miniatures {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.miniature {
+  width: 72px;
+  height: 96px;
+  padding: 0;
+  border: 1px solid transparent;
+  background: none;
+  cursor: pointer;
+  opacity: 0.55;
+  transition: opacity 0.3s ease, border-color 0.3s ease;
+}
+.miniature img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.miniature:hover,
+.miniature.active { opacity: 1; border-color: #7F3301; }
+
+/* Sur la page article, le bloc infos ne doit pas bouger au survol */
+.fiche.product-card:hover { transform: none; }
+
+/* ── RECHERCHE ── */
+.search-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 55;
+  background: rgba(28, 20, 16, 0.45);
+}
+
+.search-panel {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 60;
+  max-height: 100vh;
+  overflow-y: auto;
+  background: #FFDEB3;
+  box-shadow: 0 10px 40px rgba(28, 20, 16, 0.15);
+  animation: rechercheDescend 0.3s ease;
+}
+
+@keyframes rechercheDescend {
+  from { transform: translateY(-20px); opacity: 0; }
+  to   { transform: translateY(0); opacity: 1; }
+}
+
+.search-input {
+  font-family: 'Bodoni Moda', serif;
+  font-size: 1.6rem;
+  color: #1C1410;
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
+.search-input::placeholder { color: #1C1410; opacity: 0.35; }
+
+.search-label {
+  font-family: 'Jost', sans-serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #1C1410;
+  opacity: 0.55;
+}
+
+.search-chip {
+  font-family: 'Jost', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #1C1410;
+  background: none;
+  border: 1px solid rgba(127, 51, 1, 0.3);
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.search-chip:hover { background: #1C1410; color: #FFDEB3; border-color: #1C1410; }
+
+.search-result { text-decoration: none; display: block; }
+.search-result img { transition: opacity 0.3s ease; }
+.search-result:hover img { opacity: 0.85; }
+.search-result:hover .font-display { color: #7F3301; }
+
+@media (max-width: 640px) {
+  .search-input { font-size: 1.2rem; }
+}
+
+/* ── LOADER (écran d'ouverture) ── */
+.loader-actif,
+.loader-actif body {
+  overflow: hidden;
+}
+
+#loader {
+  position: fixed;
+  inset: 0;
+  z-index: 9998;
+  background: #FFDEB3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+  transition: transform 0.8s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+/* Sortie : l'écran glisse vers le haut comme un rideau */
+#loader.loader-sortie {
+  transform: translateY(-100%);
+}
+
+.loader-mono {
+  width: 84px;
+  height: auto;
+  overflow: visible;
+}
+
+/* Le monogramme se dessine (contour), puis se remplit */
+.loader-mono path {
+  fill: #7F3301;
+  fill-opacity: 0;
+  stroke: #7F3301;
+  stroke-width: 1;
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  animation:
+    tracer 1.3s cubic-bezier(0.65, 0, 0.35, 1) forwards,
+    remplir 0.5s ease 1.1s forwards;
+}
+
+@keyframes tracer  { to { stroke-dashoffset: 0; } }
+@keyframes remplir { to { fill-opacity: 1; } }
+
+.loader-texte {
+  font-family: 'Jost', sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.45em;
+  text-transform: uppercase;
+  color: #7F3301;
+  opacity: 0;
+  animation: apparaitre 0.6s ease 1.2s forwards;
+}
+
+@keyframes apparaitre {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── MOTIFS PEINTS AU SCROLL ── */
+.motif {
+  width: 240px;
+  max-width: 70%;
+  margin: 18px auto 0;
+}
+
+/* Variante alignée à gauche (sections texte) */
+.motif.motif-gauche {
+  margin: 0 0 32px 0;
+}
+
+.motif svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+/* Au départ, chaque trait est caché */
+.motif path {
+  fill: none;
+  stroke: #7F3301;
+  stroke-width: 1.2;
+  stroke-linecap: butt;
+  stroke-linejoin: round;
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  transition: stroke-dashoffset 1s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+/* Les lignes de côté partent du centre, plus discrètes */
+.motif .trait {
+  opacity: 0.45;
+  transition-duration: 0.9s;
+}
+
+/* Le motif central se peint ensuite, élément par élément */
+.motif .forme {
+  transition-delay: calc(0.4s + var(--i, 0) * 0.15s);
+}
+
+.motif circle {
+  fill: #D4A017;
+  opacity: 0;
+  transition: opacity 0.5s ease 1.3s;
+}
+
+/* État "peint" : ajouté par motifs.js quand le motif est visible */
+.motif.peint path   { stroke-dashoffset: 0; }
+.motif.peint circle { opacity: 1; }
+
+@media (prefers-reduced-motion: reduce) {
+  .motif path,
+  .motif circle { transition: none; }
+}
+
+/* ── PHOTOS QUI SE DÉROULENT COMME UN TISSU ── */
+/* Le cadre .tissu reste visible (le script le surveille),
+   c'est la photo à l'intérieur qui se déroule */
+.tissu {
+  overflow: hidden;
+}
+
+.js .tissu > img:first-child {
+  clip-path: inset(0 0 100% 0);            /* cachée : "enroulée" en haut */
+  transform: scale(1.12);
+  transition:
+    clip-path 1.2s cubic-bezier(0.77, 0, 0.18, 1),
+    transform 1.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Ajouté par script.js quand la photo arrive à l'écran */
+.js .tissu.deroule > img:first-child {
+  clip-path: inset(0 0 0 0);               /* entièrement déroulée */
+  transform: scale(1);
+}
+
+/* Cascade : les cartes voisines se déroulent l'une après l'autre */
+.reveal-delay-2 .tissu > img:first-child { transition-delay: 0.15s; }
+.reveal-delay-3 .tissu > img:first-child { transition-delay: 0.3s; }
+
+/* Animations réduites : photos visibles directement */
+@media (prefers-reduced-motion: reduce) {
+  .js .tissu > img:first-child { clip-path: none; transform: none; transition: none; }
+}
+
+/* ════════════════════════════════════════════
+   MICRO-INTERACTIONS
+   ════════════════════════════════════════════ */
+
+/* 1. Le badge du panier rebondit quand on ajoute un article */
+@keyframes rebond {
+  0%   { transform: scale(1); }
+  30%  { transform: scale(1.6); }
+  55%  { transform: scale(0.85); }
+  75%  { transform: scale(1.15); }
+  100% { transform: scale(1); }
+}
+
+#cart-count.rebond {
+  animation: rebond 0.6s ease;
+}
+
+/* 2. Les boutons se remplissent de gauche à droite au survol */
+.btn-hero,
+.btn-outline,
+.btn-add-cart.plein {
+  background-image: linear-gradient(var(--remplissage), var(--remplissage));
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 0% 100%;
+  transition:
+    background-size 0.45s cubic-bezier(0.65, 0, 0.35, 1),
+    color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.btn-hero:hover,
+.btn-outline:hover,
+.btn-add-cart.plein:hover {
+  background-size: 100% 100%;
+}
+
+/* Couleur de remplissage de chaque bouton */
+.btn-hero              { --remplissage: #FFDEB3; }
+.btn-outline           { --remplissage: #1C1410; }
+.btn-add-cart.plein    { --remplissage: #7F3301; }
+
+/* On annule l'ancien changement de fond instantané */
+.btn-hero:hover,
+.btn-outline:hover     { background-color: transparent; }
+.btn-add-cart.plein:hover { background-color: #1C1410; }
+
+/* 3. Fondu de la grande photo sur la page article */
+.js .galerie-principale.tissu > img:first-child {
+  transition:
+    clip-path 1.2s cubic-bezier(0.77, 0, 0.18, 1),
+    transform 1.6s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 0.25s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #cart-count.rebond { animation: none; }
+  .btn-hero, .btn-outline, .btn-add-cart.plein { transition: none; }
+}
+
+/* ════════════════════════════════════════════
+   HERO VIVANT
+   ════════════════════════════════════════════ */
+
+/* Les lettres de TONAFA montent une par une en sortant du flou */
+.js .hero-lettre {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(0.5em);
+  filter: blur(8px);
+  transition:
+    opacity 0.9s ease,
+    transform 1.1s cubic-bezier(0.22, 1, 0.36, 1),
+    filter 0.9s ease;
+  transition-delay: calc(0.25s + var(--i) * 0.09s);
+}
+
+.hero-pret .hero-lettre {
+  opacity: 1;
+  transform: none;
+  filter: none;
+}
+
+/* New Light, Chic Moderne et le bouton apparaissent en douceur */
+.js .hero-apparait {
+  opacity: 0;
+  transform: translateY(14px);
+  transition:
+    opacity 0.8s ease,
+    transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+  transition-delay: var(--d, 0s);
+}
+
+.hero-pret .hero-apparait {
+  opacity: 1;
+  transform: none;
+}
+
+/* Les deux fils dorés se tirent depuis le centre */
+.js .hero-ligne {
+  transform: scaleX(0);
+  transition: transform 1s cubic-bezier(0.65, 0, 0.35, 1) 1s;
+}
+
+.hero-ligne-gauche { transform-origin: right center; }
+.hero-ligne-droite { transform-origin: left center; }
+
+.hero-pret .hero-ligne {
+  transform: scaleX(1);
+}
+
+/* Prépare la parallaxe pour qu'elle reste fluide */
+.hero-fond,
+.hero-contenu {
+  will-change: transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .js .hero-lettre,
+  .js .hero-apparait,
+  .js .hero-ligne {
+    opacity: 1;
+    transform: none;
+    filter: none;
+    transition: none;
+  }
+}
+
+/* ════════════════════════════════════════════
+   TRANSITIONS ENTRE PAGES : le voile crème
+   ════════════════════════════════════════════ */
+#voile {
+  position: fixed;
+  inset: 0;
+  z-index: 9997;                       /* sous le loader et le curseur */
+  background: #FFDEB3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  transform: translateY(100%);         /* caché sous l'écran */
+  transition: transform 0.6s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+#voile span {
+  font-family: 'Bodoni Moda', serif;
+  font-size: 1.1rem;
+  letter-spacing: 0.5em;
+  color: #7F3301;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+#voile.couvre        { transform: translateY(0); pointer-events: auto; }
+#voile.couvre span   { opacity: 1; transition-delay: 0.25s; }
+#voile.part          { transform: translateY(-100%); }
+#voile.part span     { opacity: 0; transition-delay: 0s; }
+#voile.instant,
+#voile.instant span  { transition: none; }
+
+/* ════════════════════════════════════════════
+   LIN EN 3D
+   ════════════════════════════════════════════ */
+.lin-3d {
+  position: relative;
+  height: 70vh;
+  min-height: 420px;
+  max-height: 720px;
+}
+
+.lin-3d canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1.2s ease;
+}
+
+.lin-3d canvas.pret { opacity: 1; }
+
+/* Si la 3D ne marche pas : la texture à plat */
+.lin-3d canvas.lin-secours {
+  opacity: 1;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .lin-3d {
+    height: 60vh;
+    min-height: 360px;
+  }
+}

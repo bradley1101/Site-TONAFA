@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>À propos — TONAFA</title>
+  <meta name="description" content="L'histoire de TONAFA, marque de vêtements chic et moderne inspirée des cultures africaines.">
+  <link rel="icon" type="image/jpeg" href="assets/img/logo/logo-monogramme.jpg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            creme:   '#FFDEB3',
+            cognac:  '#7F3301',
+            marron:  '#4A1908',
+            or:      '#D4A017',
+            charbon: '#1C1410',
+          },
+          fontFamily: {
+            display: ['"Bodoni Moda"', 'serif'],
+            sans:    ['Jost', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-creme text-charbon font-sans antialiased">
+    <script src="js/loader.js"></script>
+    <script src="js/transitions.js"></script>
+
+
+  <!-- ===== HEADER ===== -->
+  <header id="header" class="bg-creme sticky top-0 z-50 transition-all duration-300">
+    <div class="h-px bg-cognac opacity-30"></div>
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+
+      <nav class="hidden md:flex items-center gap-8">
+        <a href="index.html" class="nav-link">Accueil</a>
+        <a href="boutique.html" class="nav-link">Boutique</a>
+        <a href="about.html" class="nav-link">À propos</a>
+      </nav>
+
+      <a href="index.html" class="md:absolute md:left-1/2 md:-translate-x-1/2">
+        <img src="assets/img/logo/logo-cognac-transparent.png"
+             alt="TONAFA" class="h-14 w-auto object-contain">
+      </a>
+
+      <div class="flex items-center gap-5 ml-auto">
+        <button id="cart-btn" aria-label="Panier" class="icon-btn relative">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none"
+               viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+            <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4zM3 6h18M16 10a4 4 0 0 1-8 0"/>
+          </svg>
+          <span id="cart-count"
+                class="absolute -top-2 -right-2 bg-cognac text-creme text-xs rounded-full
+                       w-4 h-4 flex items-center justify-center hidden">0</span>
+        </button>
+        <button id="menu-btn" aria-label="Menu" class="icon-btn md:hidden">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
+               viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobile-menu" class="hidden md:hidden bg-creme border-t border-cognac border-opacity-20">
+      <nav class="flex flex-col px-6 py-4 gap-4">
+        <a href="index.html" class="nav-link">Accueil</a>
+        <a href="boutique.html" class="nav-link">Boutique</a>
+        <a href="about.html" class="nav-link">À propos</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+    </div>
+    <div class="h-px bg-cognac opacity-30"></div>
+  </header>
+
+
+  <!-- ===== HERO ABOUT ===== -->
+  <section class="relative w-full h-[100vh] overflow-hidden">
+    <img src="assets/img/lifestyle/veste-culotte.jpeg"
+         alt="L'univers TONAFA"
+         class="absolute inset-0 w-full h-full object-cover object-center">
+    <div class="absolute inset-0 bg-marron opacity-50"></div>
+    <div class="relative z-10 h-full flex flex-col items-center justify-center text-center px-6">
+      <p class="font-sans text-or text-xs tracking-[0.4em] uppercase mb-4">
+        ✦ &nbsp; Notre univers &nbsp; ✦
+      </p>
+      <h1 class="font-display text-creme text-5xl md:text-7xl font-normal">
+        À propos
+      </h1>
+      <div class="flex items-center gap-4 mt-6">
+        <div class="h-px w-12 bg-or opacity-50"></div>
+        <span class="text-or opacity-50 text-xs tracking-widest font-sans uppercase">
+          TONAFA — Chic Moderne
+        </span>
+        <div class="h-px w-12 bg-or opacity-50"></div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===== SECTION CITATION ===== -->
+  <section class="py-20 px-6 text-center reveal">
+    <div class="max-w-2xl mx-auto">
+      <span class="font-display text-cognac text-6xl opacity-20 leading-none">"</span>
+      <p class="font-display text-charbon text-2xl md:text-3xl font-normal italic
+                leading-relaxed -mt-6">
+        Every day is a fashion show<br>and the world is your runway.
+      </p>
+      <p class="font-sans text-cognac text-xs tracking-[0.3em] uppercase mt-6 opacity-60">
+        — Coco Chanel
+      </p>
+    </div>
+  </section>
+
+
+  <!-- ===== SECTION HISTOIRE ===== -->
+  <section class="py-10 px-6">
+    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+
+      <!-- Texte gauche -->
+      <div class="reveal reveal-delay-1">
+        <p class="font-sans text-cognac text-xs tracking-[0.35em] uppercase mb-4">
+          Notre histoire
+        </p>
+        <h2 class="font-display text-charbon text-4xl md:text-5xl font-normal
+                   leading-tight mb-6">
+          L'élégance<br>à l'africaine
+        </h2>
+                  <div class="motif motif-gauche" data-motif="spirale"></div>
+        <p class="font-sans text-charbon text-sm leading-loose opacity-80 mb-5">
+          TONAFA est une marque spécialisée dans la création de vêtements modernes
+          inspirés des cultures africaines. Elle allie minimalisme, symboliques
+          et peintures textiles au lin, pour offrir des pièces uniques, élégantes
+          et profondes de sens.
+        </p>
+        <p class="font-sans text-charbon text-sm leading-loose opacity-80 mb-5">
+          Sa mission : valoriser l'identité africaine à travers des créations
+          contemporaines, accessibles et adaptées à la femme et à l'homme
+          d'aujourd'hui.
+        </p>
+        <p class="font-sans text-charbon text-sm leading-loose opacity-80">
+          Chaque pièce TONAFA est pensée comme une œuvre — le fruit d'un
+          dialogue entre tradition et modernité, entre geste artisanal
+          et esthétique contemporaine.
+        </p>
+      </div>
+
+      <!-- Photo droite -->
+      <div class="relative reveal reveal-delay-2">
+        <div class="tissu">
+        <img src="assets/img/lifestyle/chemise-homme.jpeg"
+             alt="TONAFA — savoir-faire"
+             class="w-full h-[600px] object-cover object-center">
+        </div>
+        <div class="absolute -bottom-4 -left-4 w-full h-full
+                    border border-cognac opacity-20 -z-10"></div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ===== SECTION VALEURS ===== -->
+  <section class="py-24 px-6">
+    <div class="max-w-6xl mx-auto">
+
+      <!-- Titre -->
+       <div class="text-center mb-16 reveal">
+        <img src="assets/img/logo/logo-monogramme.jpg"
+             alt="TONAFA"
+             class="w-16 h-16 rounded-full mx-auto mb-6 opacity-60">
+        <p class="font-sans text-cognac text-xs tracking-[0.35em] uppercase mb-4">
+          Ce qui nous définit
+        </p>
+        <h2 class="font-display text-charbon text-4xl font-normal">
+           Nos valeurs
+        </h2>
+                <div class="motif" data-motif="losanges"></div>
+        </div>
+
+      <!-- 3 valeurs -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+
+        <div class="flex flex-col items-center text-center reveal reveal-delay-1">
+          <div class="w-12 h-12 border border-cognac border-opacity-30
+                      flex items-center justify-center mb-6">
+            <span class="text-cognac text-lg">✦</span>
+          </div>
+          <h3 class="font-display text-charbon text-xl font-normal mb-4">
+            Authenticité
+          </h3>
+          <p class="font-sans text-charbon text-sm leading-loose opacity-60">
+            Chaque création puise ses racines dans les cultures et textiles
+            d'Afrique de l'Ouest, réinterprétés avec une sensibilité moderne.
+          </p>
+        </div>
+
+        <div class="flex flex-col items-center text-center reveal reveal-delay-2">
+          <div class="w-12 h-12 border border-cognac border-opacity-30
+                      flex items-center justify-center mb-6">
+            <span class="text-cognac text-lg">◈</span>
+          </div>
+          <h3 class="font-display text-charbon text-xl font-normal mb-4">
+            Artisanat
+          </h3>
+          <p class="font-sans text-charbon text-sm leading-loose opacity-60">
+            Broderies à la main, matières naturelles, finitions soignées —
+            le savoir-faire artisanal est au cœur de chaque pièce TONAFA.
+          </p>
+        </div>
+
+        <div class="flex flex-col items-center text-center reveal reveal-delay-3">
+          <div class="w-12 h-12 border border-cognac border-opacity-30
+                      flex items-center justify-center mb-6">
+            <span class="text-cognac text-lg">◇</span>
+          </div>
+          <h3 class="font-display text-charbon text-xl font-normal mb-4">
+            Élégance
+          </h3>
+          <p class="font-sans text-charbon text-sm leading-loose opacity-60">
+            Un style minimaliste et épuré qui sublime celui ou celle qui
+            le porte, sans jamais sacrifier le confort au profit de l'esthétique.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===== SECTION COLLECTION NEW LIGHT ===== -->
+  <section class="py-10 px-6 pb-24">
+    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+
+      <!-- Photo gauche -->
+      <div class="relative reveal reveal-delay-1">
+        <div class="tissu">
+        <img src="assets/img/lifestyle/articles.jpeg"
+             alt="Collection New Light"
+             class="w-full h-[600px] object-cover object-center">
+        </div>
+        <div class="absolute -bottom-4 -right-4 w-full h-full
+                    border border-cognac opacity-20 -z-10"></div>
+        <!-- Badge collection -->
+        <div class="absolute top-6 left-6 bg-marron text-creme px-4 py-2">
+          <p class="font-sans text-xs tracking-[0.25em] uppercase">Collection</p>
+          <p class="font-display text-lg font-normal">New Light</p>
+        </div>
+      </div>
+
+      <!-- Texte droite -->
+      <div class="reveal reveal-delay-2">
+        <p class="font-sans text-cognac text-xs tracking-[0.35em] uppercase mb-4">
+          Collection 2026
+        </p>
+        <h2 class="font-display text-charbon text-4xl md:text-5xl font-normal
+                   leading-tight mb-6">
+          New Light
+        </h2>
+                  <div class="motif motif-gauche" data-motif="chevrons"></div>
+        <p class="font-sans text-charbon text-sm leading-loose opacity-80 mb-5">
+          New Light est une proposition artistique moderne du textile où le lin,
+          en tant que fibre naturelle et noble, constitue le support aérien
+          mais sensible de compositions faites à la main.
+        </p>
+        <p class="font-sans text-charbon text-sm leading-loose opacity-80 mb-10">
+          Sur les toiles, des motifs africains — géométriques ou inspirés —
+          organisés en couleur et geste pictural, font de chaque pièce
+          une œuvre portée.
+        </p>
+        <a href="boutique.html" class="btn-outline">
+          Découvrir la collection
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ===== CTA FINAL ===== -->
+  <section class="bg-marron py-20 px-6 text-center reveal">
+    <p class="font-sans text-or text-xs tracking-[0.4em] uppercase mb-4">
+      ✦ &nbsp; Rejoignez l'univers &nbsp; ✦
+    </p>
+    <h2 class="font-display text-creme text-4xl md:text-5xl font-normal mb-8">
+      Prête à porter TONAFA ?
+    </h2>
+    <a href="boutique.html" class="btn-hero">
+      Voir la boutique
+    </a>
+  </section>
+
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="bg-charbon text-creme py-16 px-6">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-14">
+        <div class="flex flex-col items-start">
+          <img src="assets/img/logo/logo-blanc-transparent.png"
+               alt="TONAFA"
+               class="h-12 w-auto object-contain mb-6">
+          <p class="font-sans text-xs leading-loose opacity-50 max-w-xs">
+            Vêtements modernes inspirés des cultures africaines.
+            Chaque pièce, une œuvre. Chaque tenue, une identité.
+          </p>
+        </div>
+        <div>
+          <h3 class="footer-title">Navigation</h3>
+          <ul class="flex flex-col gap-3 mt-6">
+            <li><a href="index.html" class="footer-link">Accueil</a></li>
+            <li><a href="boutique.html" class="footer-link">Boutique</a></li>
+            <li><a href="about.html" class="footer-link">À propos</a></li>
+            <li><a href="contact.html" class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="footer-title">Contact</h3>
+          <ul class="flex flex-col gap-3 mt-6">
+            <li class="flex items-start gap-3">
+              <span class="text-or opacity-70 mt-0.5">✦</span>
+              <span class="font-sans text-xs opacity-50">Cotonou, Bénin</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-or opacity-70 mt-0.5">✦</span>
+              <a href="https://wa.me/2290143510837"
+                 class="font-sans text-xs opacity-50 hover:opacity-100
+                        hover:text-or transition-all duration-300">
+                Commander via WhatsApp
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="h-px bg-creme opacity-10 mb-8"></div>
+            <!-- Copyright -->
+      <div class="flex justify-center items-center">
+        <p class="font-sans text-xs opacity-30 tracking-widest uppercase text-center">
+          © 2026 TONAFA — Chic Moderne. Tous droits réservés.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- PANIER COULISSANT -->
+  <div id="cart-overlay"
+       class="fixed inset-0 bg-charbon bg-opacity-50 z-40 hidden opacity-0 transition-opacity duration-300">
+  </div>
+  <div id="cart-drawer"
+       class="fixed top-0 right-0 h-full w-full max-w-sm bg-creme z-50
+              translate-x-full transition-transform duration-400 ease-in-out
+              flex flex-col shadow-2xl">
+    <div class="flex items-center justify-between px-6 py-5 border-b border-cognac border-opacity-20">
+      <h2 class="font-display text-charbon text-2xl font-normal">Mon Panier</h2>
+      <button id="cart-close" class="icon-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none"
+             viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+        </svg>
+      </button>
+    </div>
+    <div id="cart-items" class="flex-1 overflow-y-auto px-6 py-4">
+      <div id="cart-empty" class="flex flex-col items-center justify-center h-full text-center">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12 text-cognac opacity-20 mb-4"
+             fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1">
+          <path stroke-linecap="round" stroke-linejoin="round"
+                d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4zM3 6h18M16 10a4 4 0 0 1-8 0"/>
+        </svg>
+        <p class="font-sans text-charbon text-sm opacity-40 tracking-widest uppercase">
+          Votre panier est vide
+        </p>
+      </div>
+    </div>
+    <div id="cart-footer" class="hidden px-6 py-6 border-t border-cognac border-opacity-20">
+      <div class="flex justify-between items-center mb-6">
+        <span class="font-sans text-xs tracking-[0.2em] uppercase text-charbon opacity-60">Total</span>
+        <span id="cart-total" class="font-display text-charbon text-2xl">0 FCFA</span>
+      </div>
+      <button id="whatsapp-btn"
+              class="w-full flex items-center justify-center gap-3 bg-[#25D366]
+                     text-white font-sans text-xs tracking-[0.2em] uppercase
+                     py-4 px-6 transition-opacity duration-300 hover:opacity-90 cursor-pointer">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/>
+        </svg>
+        Commander via WhatsApp
+      </button>
+      <button id="cart-clear"
+              class="w-full text-center font-sans text-xs opacity-30 hover:opacity-60
+                     tracking-widest uppercase mt-4 transition-opacity duration-300 cursor-pointer">
+        Vider le panier
+      </button>
+    </div>
+  </div>
+  <script src="js/motifs.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
